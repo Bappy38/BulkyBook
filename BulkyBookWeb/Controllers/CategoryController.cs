@@ -39,4 +39,37 @@ public class CategoryController : Controller
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
+
+    //GET
+    public IActionResult Edit(int? id)
+    {
+        if (id is null || id <= 0)
+        {
+            return NotFound();
+        }
+
+        var category = _context.Categories.Find(id);
+
+        if (category == null)
+        {
+            return NotFound();
+        }
+
+        return View(category);
+    }
+
+    //POST
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Edit(Category category)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+
+        _context.Categories.Update(category);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
 }
