@@ -12,7 +12,7 @@ This folder contains all the static files like `.css`, `.js` and images. So, if 
 
 This file contains config like database connection strings.
 
-## .NET Core Pipeline
+## .NET Core Request/Middleware Pipeline
 
 Pipeline consists of different middlewares like `Auth`, `MVC`, `Static Files` etc. When our app server receives a request from the browser, it sends that request through this pipeline where each middlewares modify the request and response as per their functionality before passing it to the next middleware.
 
@@ -145,3 +145,11 @@ Database First approach is we setup everything in database, then we write code t
 
 <hr>
 
+## EFCore Migrations
+
+Migration is basically keeping the track of all the DB changes that are needed. Once we created the migration, we push that migration to the database to make those changes to our tables.
+
+- We can add migration using the command `add-migration {nameOfMigration}`.
+- We need the NUGET package EFCore.Tools to create migration.
+- When we create migration, there will be created a file with the name of migration which contains two methods `up` and `down`. `up` method do all such things that needs to be done in this migration and `down` method do all such things that needs to be done to revert this migration.
+- We can push migration to the database using the command `update-database`.
