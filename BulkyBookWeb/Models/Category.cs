@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace BulkyBookWeb.Models;
 
@@ -8,6 +9,8 @@ public class Category : IValidatableObject
     public int Id { get; set; }
     [Required]
     public string Name { get; set; }
+    [DisplayName("Display Order")]
+    [Range(1, 100, ErrorMessage="Display Order must be between 1 and 100 only.")]
     public int DisplayOrder { get; set; }
     public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
 
@@ -15,7 +18,7 @@ public class Category : IValidatableObject
     {
         if (string.Equals(Name, DisplayOrder.ToString()))
         {
-             yield return new ValidationResult("Name and DisplayOrder cannot be same.", new[] { nameof(Name), nameof(DisplayOrder) });
+             yield return new ValidationResult("Name and Display Order cannot be same.", new[] { nameof(Name), nameof(DisplayOrder) });
         }
     }
 }

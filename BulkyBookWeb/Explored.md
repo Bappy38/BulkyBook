@@ -160,6 +160,8 @@ Migration is basically keeping the track of all the DB changes that are needed. 
 
 This attribute is used to prevent CROSS-SITE-Scripting attack. It validate the token assigned from VIEW.
 
+**Check Data Annotation documentation for different kind of validation attribute.**
+
 
 
 
