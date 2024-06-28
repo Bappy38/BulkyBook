@@ -30,6 +30,11 @@ public class CategoryController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Create(Category category)
     {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+
         _context.Categories.Add(category);
         _context.SaveChanges();
         return RedirectToAction("Index");
