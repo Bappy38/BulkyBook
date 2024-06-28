@@ -162,7 +162,41 @@ This attribute is used to prevent CROSS-SITE-Scripting attack. It validate the t
 
 **Check Data Annotation documentation for different kind of validation attribute.**
 
+<hr>
 
+# Why partial view?
 
+We can think it of like a shared component. If we want to reuse any view inside multiple views accross application, then we create a partial view.
+
+<hr>
+
+# AppData
+
+`AppData` is a temporary storage.
+
+<hr>
+
+# Scaffold CRUD
+
+We can generate all the CRUD functionality, views while creating the Controller.
+
+<hr>
+
+# Assignment/TODO
+
+- N-Tier Architecture
+- Repository Pattern and UnitOfWork
+- Areas in .NET Core
+- ViewBag/ViewData/TempData in .NET Core
+- SweetAlerts, Rich Text Editor and DataTables in .NET Core
+- Scaffold Identity (Razor Class Library) in MVC Application
+- Roles and Authorization in .NET Core
+- Stripe Payment/Refund in .NET Core
+- Session in .NET Core
+- Emails with SMTP
+- OAuth
+- View Components in .NET Core
+- Seed Database with DbInitializer
+- Deploy to Azure
 
 https://www.youtube.com/watch?v=hZ1DASYd9rk
