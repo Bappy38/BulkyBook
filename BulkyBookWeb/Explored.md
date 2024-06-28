@@ -153,3 +153,10 @@ Migration is basically keeping the track of all the DB changes that are needed. 
 - We need the NUGET package EFCore.Tools to create migration.
 - When we create migration, there will be created a file with the name of migration which contains two methods `up` and `down`. `up` method do all such things that needs to be done in this migration and `down` method do all such things that needs to be done to revert this migration.
 - We can push migration to the database using the command `update-database`.
+
+<hr>
+
+# 
+
+
+https://www.youtube.com/watch?v=hZ1DASYd9rk
