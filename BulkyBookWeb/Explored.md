@@ -156,7 +156,11 @@ Migration is basically keeping the track of all the DB changes that are needed. 
 
 <hr>
 
-# 
+# [ValidateAntiForgeryToken]
+
+This attribute is used to prevent CROSS-SITE-Scripting attack. It validate the token assigned from VIEW.
+
+
 
 
 https://www.youtube.com/watch?v=hZ1DASYd9rk
